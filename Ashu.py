@@ -1,7 +1,4 @@
 # Don't Remove Credit @AshutoshGoswami24
-# Don't Remove Credit @AshutoshGoswami24
-# Don't Remove Credit @AshutoshGoswami24
-# Don't Remove Credit @AshutoshGoswami24
 import pyrogram
 import os
 import asyncio
@@ -65,7 +62,7 @@ def about_callback(bot, update):
                         disable_web_page_preview=True)
 
 # Don't Remove Credit @AshutoshGoswami24
-@Ashu.on_message(pyrogram.filters.channel)
+@Ashu.on_message(pyrogram.filters.photo)
 def edit_caption(bot, update: pyrogram.types.Message):
     motech, file_name = get_file_details(update)
     try:
@@ -79,29 +76,11 @@ def edit_caption(bot, update: pyrogram.types.Message):
 
 # Don't Remove Credit @AshutoshGoswami24
 def get_file_details(update: pyrogram.types.Message):
-    if update.media:
-        for message_type in (
-                "photo",
-                "animation",
-                "audio",
-                "document",
-                "video",
-                "video_note",
-                "voice",
-                "sticker"
-        ):
-            obj = getattr(update, message_type)
-            if obj:
-                # Extract file name based on message type
-                if message_type in ["photo", "animation", "document", "video"]:
-                    file_name = obj.file_name
-                elif message_type == "audio":
-                    file_name = obj.title
-                elif message_type == "sticker":
-                    file_name = f"sticker_{obj.file_unique_id}.webp"
-                else:
-                    file_name = f"{message_type}.mp4"  # Default name for other media types
-                return obj, file_name
+    if update.photo:
+        obj = update.photo
+        # Generate unique file name for photo
+        file_name = f"photo_{obj.file_id}.jpg"
+        return obj, file_name
 
 # Don't Remove Credit @AshutoshGoswami24
 def start_buttons(bot, update):
