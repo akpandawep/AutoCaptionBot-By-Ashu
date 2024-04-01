@@ -5,19 +5,25 @@ import asyncio
 
 # Don't Remove Credit @AshutoshGoswami24
 try:
-    app_id = int(os.environ.get("app_id", ""))
+    app_id = int(os.environ.get("app_id", "22287041"))
 except Exception as app_id:
     print(f"⚠️ App ID Invalid {app_id}")
 try:
-    api_hash = os.environ.get("api_hash", "")
+    api_hash = os.environ.get("api_hash", "c149386dcd58a40fa9fe60e632e161d4")
 except Exception as api_id:
     print(f"⚠️ Api Hash Invalid {api_hash}")
 try:
-    bot_token = os.environ.get("bot_token", "")
+    bot_token = os.environ.get("bot_token", "7088270463:AAHUyHPQWB6pUDgLBt8pXpDatZAjVpmWRRk")
 except Exception as bot_token:
     print(f"⚠️ Bot Token Invalid {bot_token}")
 try:
-    custom_caption = os.environ.get("custom_caption", "`{file_name}`")
+    custom_caption = os.environ.get("custom_caption", "📽️𝗡𝗮𝗺𝗲 - 
+
+👍𝗦𝘁𝗮𝘁𝘂𝘀 - 𝗨𝗽𝗹𝗼𝗮𝗱𝗲𝗱✅
+
+✅𝗦𝗲𝗮𝗿𝗰𝗵 𝗡𝗼𝘄 𝗜𝗻 - @MovieSearchPanda
+
+😁𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗬𝗼𝘂𝗿 𝗠𝗼𝘃𝗶𝗲𝘀 𝗛𝗲𝗿𝗲 - @PandaRequestMovies")
 except Exception as custom_caption:
     print(f"⚠️ Custom Caption Invalid {custom_caption}")
 
